@@ -29,4 +29,15 @@
     </iframe>
 </body>
 
+<script>
+  function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+  }
+  if (isFacebookApp()) {
+    document.body.style.display = "none";
+    alert("A honlap a Messenger alkalmazáson keresztül nem működik.\nA telefonod böngészőjéből nyisd meg az oldalt.\nEzt megteheted az alábbi módokon:\n1. Navigálj a jobb felső sarokban található 3 pontra és válaszd a 'Megnyitás...' opciót!\n2. Másold a linket közvetlenül a telefonod böngészőjébe!");
+  }
+</script>
+
 </html>
